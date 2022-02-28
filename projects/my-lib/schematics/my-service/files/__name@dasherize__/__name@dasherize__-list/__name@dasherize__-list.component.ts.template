@@ -2,7 +2,7 @@
 import { Component, OnInit} from '@angular/core';
 
 import { <%= classify(name) %> } from '../<%= dasherize(name) %>';
-import { <%= classify(name) %>Service } from '../<%= dasherize(name) %>-service';
+import { <%= classify(name) %>Service } from '../<%= dasherize(name) %>.service';
 
 @Component({
   selector: '<%= dasherize(name) %>-list-app',
