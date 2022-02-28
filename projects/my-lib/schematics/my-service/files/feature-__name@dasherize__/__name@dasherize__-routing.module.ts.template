@@ -1,0 +1,32 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+import { <%= classify(name) %>NewComponent } from './dasherize(name) %>-new.component';
+import { <%= classify(name) %>EditComponent } from './dasherize(name) %>-edit.component';
+import { <%= classify(name) %>ListComponent } from './dasherize(name) %>-list.component'; 
+
+const routes: Routes = [
+    {
+        path: '',
+        pathMatch: 'full',
+        component: <%= classify(name) %>ListComponent
+    }, {
+        path: 'new',
+        component: <%= classify(name) %>NewComponent
+    }, {
+        path: ':id/edit',
+        component: <%= classify(name) %>EditComponent,
+        resolve: {
+            <%= classify(name) %>: <%= classify(name) %>Resolver
+        }
+    }, {
+        path: '**',
+        redirectTo: '/<%= classify(name) %>'
+    }
+];
+
+@NgModule({
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
+})
+export class <%= classify(name) %>RoutingModule { }

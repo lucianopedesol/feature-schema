@@ -1,0 +1,38 @@
+ 
+import { Component, OnInit} from '@angular/core';
+
+
+import { <%= classify(name) %> } from '../<%= dasherize(name) %>';
+import { <%= classify(name) %>Service } from '../<%= dasherize(name) %>-service';
+
+@Component({
+  selector: '<%= dasherize(name) %>-edit-app',
+  templateUrl: './<%= dasherize(name) %>-edit.component.html',
+  styleUrls: ['./<%= dasherize(name) %>-edit.component.scss']
+})
+export class <%= classify(name) %>EditComponent implements OnInit {
+
+  constructor(
+    private <%= dasherize(name) %>Service :<%= classify(name) %>Service
+  ) { 
+      
+  }
+
+
+  ngOnInit(): void {
+    this.find<%= classify(name) %>();
+  }
+
+  find<%= classify(name) %>(){
+
+  }
+ 
+  save<%= classify(name) %>(data: <%= classify(name) %>){
+
+  }
+
+  delete<%= classify(name) %>(id: string){
+
+  }
+
+}
