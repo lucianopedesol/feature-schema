@@ -47,7 +47,7 @@ export function myService(options: MyServiceSchema): Rule {
     const projectType = project.extensions['projectType'] === 'application' ? 'app' : 'lib';
 
     if (options.path === undefined) {
-      options.path = `${project.sourceRoot}/${projectType}`;
+      options.path = `${project.sourceRoot}/${projectType}/feature`;
     }
 
     const templateSource = apply(url('./files'), [
