@@ -1,0 +1,14 @@
+import {DefaultModel} from '../../shared/model/default-model.model' 
+
+export class <%= classify(name) %> extends DefaultModel {
+  public example: string;
+
+  toModel(entity): <%= classify(name) %> {
+    if (entity) {
+      super.toModel(entity);
+      this.example = entity.example;
+      
+    }
+    return this;
+  }
+}

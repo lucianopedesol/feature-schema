@@ -1,0 +1,36 @@
+ 
+import { Component, OnInit} from '@angular/core';
+
+import { <%= classify(name) %> } from '../<%= dasherize(name) %>';
+import { <%= classify(name) %>Service } from '../<%= dasherize(name) %>.service';
+
+@Component({
+  selector: '<%= dasherize(name) %>-list-app',
+  templateUrl: './<%= dasherize(name) %>-list.component.html',
+  styleUrls: ['./<%= dasherize(name) %>-list.component.scss']
+})
+export class <%= classify(name) %>ListComponent implements OnInit {
+
+  constructor(
+    private <%= camelize(name) %>Service :<%= classify(name) %>Service
+  ) { 
+
+  }
+
+  ngOnInit(): void {
+    this.findAll<%= classify(name) %>();
+  }
+  
+  findAll<%= classify(name) %>(){
+
+  }
+  create<%= classify(name) %>(){
+
+  }
+  update<%= classify(name) %>(id: string){
+
+  }
+  delete<%= classify(name) %>(id: string){
+
+  }
+}

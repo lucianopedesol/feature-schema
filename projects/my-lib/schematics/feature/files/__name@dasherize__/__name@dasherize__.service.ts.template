@@ -1,0 +1,30 @@
+// #docregion template
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+import { AppConfig } from '../core/config/app.config';
+import {BaseService} from '../../shared/services/base.service' 
+
+import { <%= classify(name) %> } from './<%=dasherize(name) %>';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class <%= classify(name) %>Service extends BaseService {
+  constructor(private http: HttpClient) { 
+    super(`${AppConfig.settings.urlApi}/<%= classify(name) %>`, http);
+  }
+
+  public save(data: <%= classify(name) %>): Observable<<%= classify(name) %>> {
+    return super.salvarBase<Usuario>(data);
+  }
+
+  public update(data: <%= classify(name) %>): Observable<<%= classify(name) %>> {
+    return super.atualizarBase<<%= classify(name) %>>(data.id, data);
+  }
+
+  public detele(id: string): any {
+    return super.deleteBase(id);
+  }
+}

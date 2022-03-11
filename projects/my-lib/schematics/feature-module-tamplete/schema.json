@@ -1,0 +1,10 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "SchematicsFeatureModuleTemplate",
+    "title": "My Feature Schema",
+    "type": "object",
+    "properties": {
+       
+     } 
+    
+  }
